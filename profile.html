@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Fav icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
+		<link rel="manifest" href="img/favicon_io/site.webmanifest" />
+
+		<!-- Bootstarp -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/46a05c488f.js" crossorigin="anonymous"></script>
+
+		<title>CMS Admin - Posts</title>
+	</head>
+	<body>
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+			<div class="container">
+				<a class="navbar-brand fw-bold" href="index.html">CMS Admin</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">Dashboard</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="posts.html">Posts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="categories.html">Categories</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="users.html">Users</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item dropdown mr-auto">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fas fa-user"></i> Welcome Mostafa
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li>
+									<a class="dropdown-item" href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="profile-settings.html"><i class="fas fa-user-cog"></i> Settings</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Page Intro -->
+		<section id="dashboard-title" class="bg-success p-4 text-light">
+			<div class="container">
+				<h1 class="display-5 d-inline fw-bold"><i class="fas fa-user"></i> Edit Profile</h1>
+			</div>
+		</section>
+
+		<!-- ACTIONS -->
+		<section id="actions" class="py-4 mb-4 bg-light">
+			<div class="container">
+				<div class="row gy-2">
+					<div class="col-md-3 d-grid">
+						<a href="index.html" class="btn btn-light"> <i class="fas fa-arrow-left"></i> Back To Dashboard </a>
+					</div>
+					<div class="col-md-3 d-grid">
+						<a href="#" class="btn btn-success"> <i class="fas fa-lock"></i> Change Password </a>
+					</div>
+					<div class="col-md-3 d-grid">
+						<a href="#" class="btn btn-danger"> <i class="fas fa-trash"></i> Delete Account </a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROFILE -->
+		<section id="profile">
+			<div class="container">
+				<div class="row gy-4">
+					<div class="col-md-9">
+						<div class="card">
+							<div class="card-header">
+								<h4>Edit Profile</h4>
+							</div>
+							<div class="card-body">
+								<form>
+									<div class="mb-3">
+										<label class="form-label" for="name">Name</label>
+										<input type="text" class="form-control" value="Mostafa Sayed" />
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="email">Email</label>
+										<input type="email" class="form-control" value="test@test.com" />
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="bio">Bio</label>
+										<textarea class="form-control" name="editor1">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde at fugiat explicabo temporibus, tempora animi sunt iusto quod beatae optio veritatis velit natus odit error! Possimus esse quisquam quibusdam eveniet autem! Minus dolore quisquam nemo similique doloribus perspiciatis tempore.</textarea
+										>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<h3>Your Avatar</h3>
+						<img src="img/avatar.png" alt="" class="d-block img-fluid mb-3" />
+						<div id="buttons" class="d-grid">
+							<button class="btn btn-primary mb-2">Edit Image</button>
+							<button class="btn btn-danger">Delete Image</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-dark text-light text-center pb-1 mt-3">
+			<p class="py-4">All Right Reserved &copy; <span id="year"></span> CMS Admin</p>
+		</footer>
+
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+			integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+			integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+		<script>
+			const currentYear = document.getElementById('year');
+			currentYear.innerText = new Date().getFullYear();
+
+			CKEDITOR.replace('editor1');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Fav icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
+		<link rel="manifest" href="img/favicon_io/site.webmanifest" />
+
+		<!-- Bootstarp -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/46a05c488f.js" crossorigin="anonymous"></script>
+
+		<title>CMS Admin - Posts</title>
+	</head>
+	<body>
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+			<div class="container">
+				<a class="navbar-brand fw-bold" href="index.html">CMS Admin</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">Dashboard</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="posts.html">Posts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="categories.html">Categories</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="users.html">Users</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item dropdown mr-auto">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fas fa-user"></i> Welcome Mostafa
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li>
+									<a class="dropdown-item" href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="profile-settings.html"><i class="fas fa-user-cog"></i> Settings</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Page Intro -->
+		<section id="dashboard-title" class="bg-primary p-4 text-light">
+			<div class="container">
+				<h1 class="display-5 d-inline fw-bold"><i class="fas fa-edit"></i> Posts</h1>
+			</div>
+		</section>
+
+		<!-- SEARCH -->
+		<section id="search" class="py-4 mb-4 bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 m-auto">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search Posts..." />
+							<div class="input-group-append">
+								<button class="btn btn-primary">Search</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- POSTS -->
+		<section id="posts">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<h4>Latest Posts</h4>
+							</div>
+							<table class="table table-striped table-hover">
+								<thead class="table-dark">
+									<tr>
+										<th>#</th>
+										<th>Title</th>
+										<th>Category</th>
+										<th>Date</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Post One</td>
+										<td>Web Development</td>
+										<td>May 10 2020</td>
+										<td>
+											<a href="details.html" class="btn btn-primary"> <i class="fas fa-angle-double-right"></i> Details </a>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Post Two</td>
+										<td>Tech Gadgets</td>
+										<td>May 11 2020</td>
+										<td>
+											<a href="details.html" class="btn btn-primary"> <i class="fas fa-angle-double-right"></i> Details </a>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Post Three</td>
+										<td>Web Development</td>
+										<td>May 13 2020</td>
+										<td>
+											<a href="details.html" class="btn btn-primary"> <i class="fas fa-angle-double-right"></i> Details </a>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Post Four</td>
+										<td>Business</td>
+										<td>May 15 2020</td>
+										<td>
+											<a href="details.html" class="btn btn-primary"> <i class="fas fa-angle-double-right"></i> Details </a>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Post Five</td>
+										<td>Web Development</td>
+										<td>May 17 2020</td>
+										<td>
+											<a href="details.html" class="btn btn-primary"> <i class="fas fa-angle-double-right"></i> Details </a>
+										</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Post Six</td>
+										<td>Health & Wellness</td>
+										<td>May 20 2020</td>
+										<td>
+											<a href="details.html" class="btn btn-primary"> <i class="fas fa-angle-double-right"></i> Details </a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- PAGINATION -->
+							<nav class="ml-4">
+								<ul class="pagination">
+									<li class="page-item disabled">
+										<a href="#" class="page-link">Previous</a>
+									</li>
+									<li class="page-item active">
+										<a href="#" class="page-link">1</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">2</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">3</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">Next</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-dark text-light text-center pb-1 mt-3">
+			<p class="py-4">All Right Reserved &copy; <span id="year"></span> CMS Admin</p>
+		</footer>
+
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+			integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+			integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+		<script>
+			const currentYear = document.getElementById('year');
+			currentYear.innerText = new Date().getFullYear();
+
+			CKEDITOR.replace('editor1');
+		</script>
+	</body>
+</html>

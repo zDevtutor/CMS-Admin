@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Fav icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
+		<link rel="manifest" href="img/favicon_io/site.webmanifest" />
+
+		<!-- Bootstarp -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/46a05c488f.js" crossorigin="anonymous"></script>
+
+		<title>CMS Admin</title>
+	</head>
+	<body>
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+			<div class="container">
+				<a class="navbar-brand fw-bold" href="index.html">CMS Admin</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">Dashboard</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="posts.html">Posts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="categories.html">Categories</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="users.html">Users</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item dropdown mr-auto">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fas fa-user"></i> Welcome Mostafa
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li>
+									<a class="dropdown-item" href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="profile-settings.html"><i class="fas fa-user-cog"></i> Settings</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section id="dashboard-title" class="bg-primary p-4 text-light">
+			<div class="container">
+				<h1 class="display-5 d-inline fw-bold"><i class="fas fa-cogs"></i> Dashboard</h1>
+				<p class="lead d-inline">Manage Your Site</p>
+			</div>
+		</section>
+
+		<section id="editing-buttons">
+			<div class="container">
+				<div class="row my-4 gy-2">
+					<div class="col-md-4 d-grid">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#userModal">
+							<i class="fas fa-plus-circle"></i> Add User
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header bg-success text-light">
+										<h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<form>
+											<div class="mb-3">
+												<label for="name" class="form-label">Name</label>
+												<input type="text" class="form-control" id="name" />
+											</div>
+											<div class="mb-3">
+												<label for="exampleInputEmail1" class="form-label">Email</label>
+												<input type="email" class="form-control" id="exampleInputEmail1" />
+											</div>
+											<div class="mb-3">
+												<label for="exampleInputPassword1" class="form-label">Password</label>
+												<input type="password" class="form-control" id="exampleInputPassword1" />
+											</div>
+											<div class="mb-3">
+												<label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+												<input type="password" class="form-control" id="exampleInputPassword1" />
+											</div>
+											<button type="submit" class="btn btn-success float-end">Save Changes</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 d-grid">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postModal">
+							<i class="fas fa-plus-circle"></i> Add Post
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header bg-primary text-light">
+										<h5 class="modal-title" id="exampleModalLabel">Add Post</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<form>
+											<div class="mb-3">
+												<label for="title" class="form-label">Title</label>
+												<input type="text" class="form-control" id="title" />
+											</div>
+											<div class="mb-3">
+												<label for="category" class="form-label">Category</label>
+												<select class="form-select" aria-label="Default select example">
+													<option selected disabled>Select Post Category</option>
+													<option value="1">Web Development</option>
+													<option value="2">Database Design</option>
+													<option value="3">UI / UX</option>
+												</select>
+											</div>
+											<div class="mb-3">
+												<label class="form-label" for="inputGroupFile02">Upload Image</label>
+												<input type="file" class="form-control" id="imgUpload" />
+												<small class="form-text text-muted">Max Size 3mb</small>
+											</div>
+
+											<div class="mb-3">
+												<label for="postBody" class="form-label">Body</label>
+												<textarea name="editor1" class="form-control" id="postBody"></textarea>
+											</div>
+
+											<button type="submit" class="btn btn-primary float-end">Save Changes</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 d-grid">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#categoryModal">
+							<i class="fas fa-plus-circle"></i> Add Category
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header bg-danger text-light">
+										<h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<form>
+											<div class="mb-3">
+												<label for="category" class="form-label">Title</label>
+												<input type="text" class="form-control" id="category" />
+											</div>
+											<button type="submit" class="btn btn-danger float-end">Save Changes</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="dashboard-content">
+			<div class="container">
+				<div class="row gy-4">
+					<div class="col-md-8">
+						<div class="card mb-3 text-light">
+							<div class="card-header bg-dark">Latest Users</div>
+							<div class="card-body">
+								<table class="table table-striped table-hover">
+									<thead class="table-danger">
+										<tr>
+											<th>Name</th>
+											<th>Email</th>
+											<th>Joined</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Mostafa</td>
+											<td>Mostafa@mail.com</td>
+											<td>Dec 12, 2020</td>
+										</tr>
+										<tr>
+											<td>Ali</td>
+											<td>Ali@mail.com</td>
+											<td>Dec 13, 2020</td>
+										</tr>
+										<tr>
+											<td>Ibrahim</td>
+											<td>Ibrahim@mail.com</td>
+											<td>Dec 14, 2020</td>
+										</tr>
+										<tr>
+											<td>Abdullah</td>
+											<td>Abdullah@mail.com</td>
+											<td>Dec 15, 2020</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="card mb-3 text-light">
+							<div class="card-header bg-dark">Latest Posts</div>
+							<div class="card-body">
+								<table class="table table-striped table-hover">
+									<thead class="table-danger">
+										<tr>
+											<th>#</th>
+											<th>Title</th>
+											<th>Category</th>
+											<th>Date</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Post one</td>
+											<td>Web Development</td>
+											<td>Mar 12, 2020</td>
+											<td><a href="details.html" class="btn btn-dark rounded">Details</a></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Post two</td>
+											<td>Web Design</td>
+											<td>May 13, 2020</td>
+											<td><a href="details.html" class="btn btn-dark rounded">Details</a></td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>Post three</td>
+											<td>Database</td>
+											<td>Jul 14, 2020</td>
+											<td><a href="details.html" class="btn btn-dark rounded">Details</a></td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>Post four</td>
+											<td>React JS</td>
+											<td>Jun 15, 2020</td>
+											<td><a href="details.html" class="btn btn-dark rounded">Details</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-body">
+								<div class="mb-4">
+									<h4>Disk Space Used</h4>
+									<div class="progress" style="height: 30px">
+										<div class="progress-bar bg-dark" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100">62%</div>
+									</div>
+								</div>
+								<div>
+									<h4>Bandwidth Used</h4>
+									<div class="progress" style="height: 30px">
+										<div class="progress-bar bg-dark" role="progressbar" style="width: 42%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">42%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card text-light">
+							<div class="card-header bg-dark"><i class="fas fa-cog"></i> Dashboard</div>
+							<div class="card-body bg-light">
+								<div class="card mb-3">
+									<div class="card-body bg-primary d-flex align-items-center justify-content-between">
+										<i class="fas fa-file-alt fa-6x"></i>
+										<div class="text-end">
+											<h1>18</h1>
+											<p>posts</p>
+										</div>
+									</div>
+									<div class="card-footer">
+										<a class="card-link text-primary d-block text-decoration-none" href="posts.html">
+											<span>View Details</span>
+											<span class="float-end"><i class="fas fa-arrow-circle-right"></i></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="card mb-3">
+									<div class="card-body bg-warning d-flex align-items-center justify-content-between">
+										<i class="fas fa-comments fa-6x"></i>
+										<div class="text-end">
+											<h1>1</h1>
+											<p>Comments</p>
+										</div>
+									</div>
+									<div class="card-footer">
+										<a class="card-link text-warning d-block text-decoration-none" href="#">
+											<span>View Details</span>
+											<span class="float-end"><i class="fas fa-arrow-circle-right"></i></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="card mb-3">
+									<div class="card-body bg-success d-flex align-items-center justify-content-between">
+										<i class="fas fa-users fa-6x"></i>
+										<div class="text-end">
+											<h1>4</h1>
+											<p>Users</p>
+										</div>
+									</div>
+									<div class="card-footer">
+										<a class="card-link text-success d-block text-decoration-none" href="users.html">
+											<span>View Details</span>
+											<span class="float-end"><i class="fas fa-arrow-circle-right"></i></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="card mb-3">
+									<div class="card-body bg-danger d-flex align-items-center justify-content-between">
+										<i class="fas fa-folder fa-6x"></i>
+										<div class="text-end">
+											<h1>6</h1>
+											<p>Categories</p>
+										</div>
+									</div>
+									<div class="card-footer">
+										<a class="card-link text-danger d-block text-decoration-none" href="categories.html">
+											<span>View Details</span>
+											<span class="float-end"><i class="fas fa-arrow-circle-right"></i></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="card mb-3">
+									<div class="card-body bg-secondary d-flex align-items-center justify-content-between">
+										<i class="fas fa-chart-bar fa-6x"></i>
+										<div class="text-end">
+											<h1>12,334</h1>
+											<p>Visits</p>
+										</div>
+									</div>
+									<div class="card-footer">
+										<a class="card-link text-secondary d-block text-decoration-none" href="#">
+											<span>View Details</span>
+											<span class="float-end"><i class="fas fa-arrow-circle-right"></i></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-dark text-light text-center pb-1 mt-3">
+			<p class="py-4">All Right Reserved &copy; <span id="year"></span> CMS Admin</p>
+		</footer>
+
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+			integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+			integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+		<script>
+			const currentYear = document.getElementById('year');
+			currentYear.innerText = new Date().getFullYear();
+
+			CKEDITOR.replace('editor1');
+		</script>
+	</body>
+</html>

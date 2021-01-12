@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Fav icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
+		<link rel="manifest" href="img/favicon_io/site.webmanifest" />
+
+		<!-- Bootstarp -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/46a05c488f.js" crossorigin="anonymous"></script>
+
+		<title>CMS Admin - Posts</title>
+	</head>
+	<body>
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+			<div class="container">
+				<a class="navbar-brand fw-bold" href="index.html">CMS Admin</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">Dashboard</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="posts.html">Posts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="categories.html">Categories</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="users.html">Users</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item dropdown mr-auto">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fas fa-user"></i> Welcome Mostafa
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li>
+									<a class="dropdown-item" href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="profile-settings.html"><i class="fas fa-user-cog"></i> Settings</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Page Intro -->
+		<section id="dashboard-title" class="bg-secondary p-4 text-light">
+			<div class="container">
+				<h1 class="display-5 d-inline fw-bold"><i class="fas fa-cogs"></i> Settings</h1>
+			</div>
+		</section>
+
+		<!-- ACTIONS -->
+		<section id="actions" class="py-4 mb-4 bg-light">
+			<div class="container">
+				<div class="row gy-2">
+					<div class="col-md-3 d-grid">
+						<a href="index.html" class="btn btn-light"> <i class="fas fa-arrow-left"></i> Back To Dashboard </a>
+					</div>
+					<div class="col-md-3">
+						<a href="index.html" class="btn btn-success"> <i class="fas fa-check"></i> Save Changes </a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SETTINGS -->
+		<section id="settings">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<h4>Edit Settings</h4>
+							</div>
+							<div class="card-body">
+								<form>
+									<fieldset class="mb-3">
+										<legend>Allow User Registration</legend>
+										<div class="form-check">
+											<label class="form-check-label"> <input name="register" type="radio" class="form-check-input" value="Yes" checked /> Yes </label>
+										</div>
+										<div class="form-check">
+											<label class="form-check-label"> <input name="register" type="radio" class="form-check-input" value="No" /> No </label>
+										</div>
+									</fieldset>
+
+									<fieldset class="mb-3">
+										<legend>Homepage Format</legend>
+										<div class="form-check">
+											<label class="form-check-label">
+												<input type="radio" name="homeFormat" class="form-check-input" value="posts" checked /> Blog Page
+											</label>
+										</div>
+										<div class="form-check">
+											<label class="form-check-label"> <input name="homeFormat" type="radio" class="form-check-input" value="page" /> Homepage </label>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-dark text-light text-center pb-1 mt-3">
+			<p class="py-4">All Right Reserved &copy; <span id="year"></span> CMS Admin</p>
+		</footer>
+
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+			integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+			integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+		<script>
+			const currentYear = document.getElementById('year');
+			currentYear.innerText = new Date().getFullYear();
+
+			CKEDITOR.replace('editor1');
+		</script>
+	</body>
+</html>
